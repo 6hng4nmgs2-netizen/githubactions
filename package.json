@@ -4,7 +4,8 @@
   "description": "Dự án Node.js đơn giản",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
