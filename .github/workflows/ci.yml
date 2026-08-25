@@ -11,6 +11,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: cache
+        with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('package.json')}}'
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
       - name: Install dependencies
         run: npm install
       - name: Run tests
