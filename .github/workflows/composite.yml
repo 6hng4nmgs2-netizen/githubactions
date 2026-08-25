@@ -10,6 +10,6 @@ jobs:
         uses: actions/checkout@v4
       # Step 2: Call composite action from action repo
       - name: Run setup, test and build
-        uses: 6hng4nmgs2-netizen/custom-actions@main
+        uses: 6hng4nmgs2-netizen/node-build/custom-actions@main
         with:
           node-version: '24'
