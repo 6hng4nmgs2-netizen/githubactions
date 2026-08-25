@@ -1,5 +1,7 @@
 name: Hello world workflow
-on: push
+on: 
+  push:
+      branches: dev
 jobs:
   say-hello:
     runs-on: ubuntu-latest
