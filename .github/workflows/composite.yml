@@ -1,0 +1,15 @@
+name: composite
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      #Step 1: checkout code of main project
+      - name: checkout repo
+        uses: actions/checkout@v4
+      # Step 2: Call composite action from action repo
+      - name: Run setup, test and build
+        uses: 6hng4nmgs2-netizen/custom-actions@main
+        with:
+          node-version: '24'
